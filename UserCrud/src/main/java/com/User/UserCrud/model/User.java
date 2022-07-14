@@ -12,6 +12,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Past;
 
 
 
@@ -37,6 +38,7 @@ public class User {
 	
 	@Column(name="dob")
 	@Temporal(TemporalType.DATE)
+	@Past
 	private Date dob;
 	
 	@NotEmpty(message = "Email should be unique!")
